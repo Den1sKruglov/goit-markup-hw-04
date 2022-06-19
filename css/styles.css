@@ -167,7 +167,7 @@ body {
    display: flex;
    align-items: center;
    margin-left: auto;
-   
+   color: var(--contact-text-color);
 }
 
 .contact-hat .item+.item {
@@ -184,11 +184,6 @@ body {
    
 }
 
-.join-item:hover {
-   border-radius: 50%;
-   background-color: var(--accent-text-color);
-}
-
 .cont-social {
    display: flex;
 
@@ -198,20 +193,10 @@ body {
    padding: 60px 0;
 }
 
-.join {
-   display: flex;
-   width: 44px;
-   height: 44px;
-
-}
 
 .join-social {
    width: 206px;
    padding-left: 70px;
-}
-
-.join .join-item + .join-item {
-   margin-left: 10px;
 }
 
 .join-title {
@@ -225,10 +210,37 @@ body {
    color: var(--primary-white-color);
 }
 
-.icon-social {
+.join {
+   display: flex;
+   width: 44px;
+   height: 44px;
+
+}
+
+.join-item {
+   display: flex;
+   justify-content: center;
+   width: 44px;
+   height: 44px;
    border-radius: 50%;
    background: rgba(255, 255, 255, 0.1);
-   fill: #FFFFFF;
+}
+.join-link {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 44px;
+   height: 44px;
+}
+
+.join-item:hover {
+   border-radius: 50%;
+   background-color: var(--accent-text-color);
+}
+
+
+.join .join-item + .join-item {
+   margin-left: 10px;
 }
 
 .contact {
@@ -263,7 +275,7 @@ body {
    fill: var(--contact-text-color);
 }
 
-.icon-envelope:hover {
+.link:hover .icon-envelope {
    fill: #2196F3;
 }
 
@@ -274,7 +286,7 @@ body {
    fill: var(--icon-bg-color);
 }
 
-.icon-smartphone:hover {
+.link:hover .icon-smartphone {
    fill: #2196F3;
 }
 
@@ -342,34 +354,22 @@ body {
    padding: 94px 0;
 }
 
-.list-item::before {
-   display: block;
-   content: "";
+.icon-vis {
+   width: 100%;
    height: 120px;
+   background: #F5F4FA;
    border-radius: 4px;
-   
-   background-repeat: no-repeat;
-   background-position: center;
-   background-color: #F5F4FA;
-   
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
-.icon-antenna::before {
-   background-image: url(../images/antenna.svg);
+.icons-form {
+   width: 70px;
+   height: 70px;
 }
 
-.icon-clock::before {
-   background-image: url(../images/clock.svg);
-}
-
-.icon-diagram::before {
-   background-image: url(../images/diagram.svg);
-}
-
-.icon-astronaut::before {
-   background-image: url(../images/astronaut.svg);
-}
-
+/*!---img-section*/
 
 .img-section {
    padding-bottom: 94px ;
@@ -451,6 +451,10 @@ body {
    padding-bottom: 50px;
 }
 
+.comand-social {
+   
+}
+
 .list-comand .comand-item + .comand-item {
    margin-left: 30px;
 }
@@ -483,29 +487,39 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
+   margin-top: 16px;
 }
 
 .social-list {
    display: flex;
    justify-content: space-between;
+   align-items: center;
    width: 206px;
    height: 44px;
 }
 
-.social-item {
+.speciality-link {
+   fill: #AFB1B8;
+}
+
+.speciality-link:hover {
+   fill: #FFFFFF;
+   background-color: #188CE8;
+}
+
+
+.social-list .social-item + .social-item {
+   margin-left: 10px;
+}
+
+.speciality-link {
+   display: flex;
+   justify-content: center;
+   align-items: center;
    width: 44px;
    height: 44px;
-   padding: 16px 0 ;
-
    border-radius: 50%;
-   border: 2px #2F303A;
 }
-
-.icon-social {
-   width: 44px;
-   height: 44px;
-}
-
 
 
 /*!---4 секция*/
@@ -528,7 +542,10 @@ body {
    justify-content: center;
 }
 
-.icon-svg {
+.clients-item{
+   display: flex;
+   align-items: center;
+   
    width: 170px;
    height: 92px;
 
@@ -536,33 +553,31 @@ body {
    border: 1px solid #AFB1B8;
    border-radius: 4px;
    fill: #AFB1B8;
-   
+}
+.clients-icon {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 170px;
+   height: 92px;
 }
 
-.icon-svg:hover {
+.icon-svg {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 106px;
+   height: 60px;  
+   fill: #AFB1B8;
+}
+
+.icon-svg:hover,
+.clients-item:hover {
    fill: #188CE8;
    border-color: #188CE8;
 }
 
-.icon-social { 
-   fill: var(--icon-bg-color);
-}
-
-.comand-social {
-   width: 44px;
-   height: 44px;
-}
-.comand-social:hover {
-   fill: #FFFFFF;
-   border: 1px solid #188CE8;
-   border-radius: 50%;
-   background-color: #188CE8;
-}
-
 .soc-icon {
-   fill: #FFFFFF;
-}
-.icon-social:hover {
    fill: #FFFFFF;
 }
 
@@ -588,7 +603,6 @@ body {
 
 .filter {
    display: flex;
-   
    justify-content: center;
    list-style: none;
 }
